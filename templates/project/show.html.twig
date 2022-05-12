@@ -1,0 +1,16 @@
+{% extends 'home/index.html.twig' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    {% block header %}{{ parent() }}{% endblock %}
+    {% block content %}
+        <main class="container-fluid mt-5">
+            <section class="main-section container fillViewport">
+                <div class="" style="height: 80vh">
+                    <h1>Project</h1>
+                </div>
+            </section>
+        </main>
+    {% endblock %}
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}

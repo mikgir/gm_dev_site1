@@ -1,0 +1,46 @@
+{% extends 'home/index.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% block header %}{{ parent() }}{% endblock %}
+    {% block content %}
+        <main class="container-fluid" style="margin-top: 10rem">
+            <section class="contact mt-lg-5" id="sectionLogin">
+                <div class="contact__heading contactHeading">
+                    <h2 class="heading__title">Please <span class="title__accent">Register</span></h2>
+                </div>
+                <div class="container">
+                    <div class="section__box contact__box">
+                        <div class="row row-cols-2"></div>
+                        <div class="contact__text col-lg-8 mt-lg-5">
+                            <p class="text-center" style="font-size: 1.5rem">You can register via<br>social networks.</p>
+                            <div class="text-center" style="font-size: 2rem">
+                                <a href="#"><i class="fa fa-vk"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            {% for flash_error in app.flashes('verify_email_error') %}
+                                <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                            {% endfor %}
+                            <div class="container">
+                                <div class="row">
+                                    {{ form_start(registrationForm) }}
+                                    <div class="form-group contact__form">
+                                        {{ form_row(registrationForm.name) }}
+                                        {{ form_row(registrationForm.email) }}
+                                        {{ form_row(registrationForm.plainPassword) }}
+                                        {{ form_row(registrationForm.submit) }}
+                                    </div>
+                                    {{ form_end(registrationForm) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    {% endblock %}
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
