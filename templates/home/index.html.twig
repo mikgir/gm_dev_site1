@@ -4,6 +4,7 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('build/css/owl.carousel.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('build/css/owl.theme.default.min.css') }}"/>
+    <link rel="stylesheet" href="https://unpkg.com/claymorphism-css/dist/clay.css"/>
 
     {{ encore_entry_link_tags('main') }}
 {% endblock %}
@@ -355,7 +356,7 @@
                                                                        class="form-control">
                                 <label for="text">Message</label><textarea name="" id="text" cols="30" rows="1"
                                                                            class="form-control"></textarea>
-                                <a href="" type="submit" class="btn btn-outline-secondary custom__btn">Send</a>
+                                <a href="" type="submit" class="btn btn-outline-secondary custom__btn clay">Send</a>
                             </form>
                         </div>
                     </div>
