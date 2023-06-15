@@ -1,3 +1,5 @@
+@import "claymorphism-css/dist/clay.scss";
+
 $body-color: rgb(30, 37, 43);
 $accent-color: #FF6E30;
 $box-shadow: 1px 0 8px rgba(305, 305, 305, 0.5);
@@ -527,16 +529,16 @@ section {
 .custom__btn {
   width: 100%;
   margin-top: 1rem;
-  background-color: #FF6E30;
-  border-radius: 25px;
-  box-shadow: -5px 5px 10px #151a1e,
-  5px -5px 10px #273038;
+  --clay-background: #FF6E30;
+  --clay-border-radius: 10px;
+  //box-shadow: -5px 5px 10px #151a1e,
+  //5px -5px 10px #273038;
 }
 
 .custom__btn:active {
   width: 100%;
   margin-top: 1rem;
-  background-color: #FF6E30;
+  --clay-background: #FF6E30;
   box-shadow: inset -1px 1px 2px #151a1e,
   inset 1px -1px 2px #273038;
 }

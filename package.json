@@ -19,6 +19,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "claymorphism-css": "^1.0.5",
         "gsap": "file:gsap-bonus.tgz",
         "jquery": "^3.6.0",
         "owl.carousel": "^2.3.4"

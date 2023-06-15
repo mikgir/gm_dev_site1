@@ -48,7 +48,7 @@ class RegistrationFormType extends AbstractType
             ->add('submit', SubmitType::class, array(
                 'label'=>'Register',
                 'attr'=>array(
-                    'class'=>'btn btn-outline-secondary custom__btn'
+                    'class'=>'btn btn-outline-secondary custom__btn clay'
                 )
             ));
     }
